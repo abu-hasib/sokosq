@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 interface LayoutProps {
   title: string;
-  totalCount?: number | undefined;
+  totalCount?: number;
   children: React.ReactNode;
 }
 
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ title, totalCount, children }) => {
         <meta name="description" content="Created by ridwan abiola" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar totalCount={totalCount} />
+      <Navbar totalCount={totalCount!} />
       <main className="h-screen">{children}</main>
     </>
   );
