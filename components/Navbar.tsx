@@ -8,7 +8,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <header className="flex bg-white sticky inset-0 z-[1] h-14 shadow-xl">
       <div className="flex container justify-between items-center">
-        <div className="brand">{/* <img src="" alt="logo" /> */}</div>
+        <div className="brand"></div>
         <nav>
           <ul className="flex items-center gap-4">
             <li>
@@ -21,9 +21,11 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               />
             </li>
             <li className={`cursor-pointer relative`}>
-              <p className="absolute -top-4 -right-6 grid place-items-center w-8 h-8 bg-red-500 rounded-full">
-                {props.totalCount}
-              </p>
+              {props.totalCount && (
+                <p className="absolute -top-4 -right-6 grid place-items-center w-8 h-8 bg-red-500 rounded-full">
+                  {props.totalCount}
+                </p>
+              )}
               <Link href="/cart">
                 <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                   <path

@@ -22,5 +22,6 @@ This spins up a server
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-`/` This is the home page
+`/` home page.
+
 `/cart` Clicking the cart icon show the cart page
